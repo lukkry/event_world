@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>EventWorld</title>
-  <%= stylesheet_link_tag    "event_world/application", :media => "all" %>
-  <%= javascript_include_tag "event_world/application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>EventWorld</title>
+    <%= stylesheet_link_tag    "event_world/application", :media => "all" %>
+    <%= javascript_include_tag "event_world/application", "https://maps.googleapis.com/maps/api/js?sensor=false" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
