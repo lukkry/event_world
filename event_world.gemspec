@@ -7,8 +7,8 @@ require "event_world/version"
 Gem::Specification.new do |s|
   s.name        = "event_world"
   s.version     = EventWorld::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
+  s.authors     = ["Lukasz Krystkowiak"]
+  s.email       = ["lukasz.krystkowiak@gmail.com"]
   s.homepage    = "TODO"
   s.summary     = "TODO: Summary of EventWorld."
   s.description = "TODO: Description of EventWorld."
