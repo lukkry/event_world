@@ -7,14 +7,14 @@ module EventWorld
 
     it "get json for particular IP address" do
       stub_request(:get, url).to_return body: "hello world"
-      PositionFinder.new("0.0.0.0").get_json.should eq "hello world"
+      expect(PositionFinder.new("0.0.0.0").get_json).to eq "hello world"
     end
 
     it "return Hash with latitude and longitude" do
       stub_request(:get, url).to_return body: json_response
       res = PositionFinder.new("0.0.0.0").query
-      res["longitude"].should eq "21"
-      res["latitude"].should eq "52.25"
+      expect(res["longitude"]).to eq "21"
+      expect(res["latitude"]).to eq "52.25"
     end
   end
 end
