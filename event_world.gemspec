@@ -13,11 +13,12 @@ Gem::Specification.new do |s|
   s.summary     = "TODO: Summary of EventWorld."
   s.description = "TODO: Description of EventWorld."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
+  s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.2.8"
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails"
 end
