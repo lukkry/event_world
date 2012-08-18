@@ -1,0 +1,8 @@
+development:
+  faye_path: "http://localhost:9292/faye"
+
+test:
+  faye_path: "http://localhost:9292/faye"
+
+production:
+  faye_path: "http://localhost:9292/faye"

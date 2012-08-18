@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "thin"
   s.add_dependency "faye"
+  s.add_dependency "konf"
   s.add_dependency "jquery-rails"
   s.add_dependency "coffee-rails"
 
