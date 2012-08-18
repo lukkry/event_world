@@ -10,14 +10,14 @@ module EventWorld
     end
 
     describe "GET 'init_data'" do
-      it "accepts only json format" do
-        ew_get :init_data, format: :json
-        expect(response).to be_success
+      before :each do
+        Faye::Client.any_instance.stub(:publish)
+        stub_request(:post, "http://localhost:9292/faye").to_return(status: 200, body: "", headers: {})
       end
 
-      it "not accept other formats than json" do
-        ew_get :init_data
-        expect(response.code).to eq "406"
+      it "be success" do
+        ew_get :init_data, format: :json
+        expect(response).to be_success
       end
     end
   end

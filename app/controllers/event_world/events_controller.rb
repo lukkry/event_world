@@ -2,13 +2,13 @@ require_dependency "event_world/application_controller"
 
 module EventWorld
   class EventsController < ApplicationController
-    respond_to :json, only: [:init_data]
-
     def index
     end
 
     def init_data
-      respond_with({ "zomg3@lol.com" => "91.207.15.105", "zomg4@lol.com" => "89.73.68.81" })
+      client = Faye::Client.new('http://localhost:9292/faye')
+      client.publish('/events', { lat: 51.930718, long: 19.226074 })
+      render text: :nothing
     end
   end
 end
