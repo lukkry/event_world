@@ -9,15 +9,10 @@ module EventWorld
       end
     end
 
-    describe "GET 'init_data'" do
-      before :each do
-        Faye::Client.any_instance.stub(:publish)
-        stub_request(:post, EwConfig.faye_path).to_return(status: 200, body: "", headers: {})
-      end
-
-      it "be success" do
-        ew_get :init_data, format: :json
-        expect(response).to be_success
+    describe "POST 'notify'" do
+      it "" do
+        Faye::Client.any_instance.should_receive(:publish).with("/events", { long: "1", lat: "2" })
+        ew_post :notify, longitude: 1, latitude: 2
       end
     end
   end

@@ -4,7 +4,6 @@ class EventWorld
     @markers = []
     @map = @initMap()
     @initFaye()
-    setTimeout((-> $.getJSON('/event_world/events/init_data')), 3000)
 
   addMarker: (lat, lng) ->
     position = new google.maps.LatLng(lat, lng)
@@ -17,7 +16,6 @@ class EventWorld
     @markers.push(marker)
     @bounds.extend(position)
     @map.fitBounds(@bounds)
-    @map.setZoom(@zoom)
 
   initMap: ->
     options = {
