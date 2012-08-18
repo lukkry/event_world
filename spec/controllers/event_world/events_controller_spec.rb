@@ -12,7 +12,7 @@ module EventWorld
     describe "GET 'init_data'" do
       before :each do
         Faye::Client.any_instance.stub(:publish)
-        stub_request(:post, "http://localhost:9292/faye").to_return(status: 200, body: "", headers: {})
+        stub_request(:post, EwConfig.faye_path).to_return(status: 200, body: "", headers: {})
       end
 
       it "be success" do
