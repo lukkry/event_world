@@ -1,4 +1,9 @@
 EventWorld::Engine.routes.draw do
-  match "events/index" => "events#index"
+  resources :events, only: [:index] do
+    collection do
+      get :init_data
+    end
+  end
+
   root to: "events#index"
 end
