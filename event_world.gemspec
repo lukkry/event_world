@@ -9,9 +9,8 @@ Gem::Specification.new do |s|
   s.version     = EventWorld::VERSION
   s.authors     = ["Lukasz Krystkowiak"]
   s.email       = ["lukasz.krystkowiak@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of EventWorld."
-  s.description = "TODO: Description of EventWorld."
+  s.summary     = "EventWorld is a Rails Engine which displays realtime events on Google map."
+  s.description = "EventWorld is a Rails Engine which displays realtime events on Google map."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
