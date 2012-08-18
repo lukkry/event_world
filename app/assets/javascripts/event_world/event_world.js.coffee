@@ -28,7 +28,7 @@ class EventWorld
     new google.maps.Map(document.getElementById("map_canvas"), options)
 
   initFaye: ->
-    client = new Faye.Client("http://localhost:9292/faye", { timeout: 120 })
+    client = new Faye.Client(gon.fayePath, { timeout: 120 })
     sub = client.subscribe('/events', (message) =>
       @addMarker(message.lat, message.long)
     )

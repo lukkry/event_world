@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>EventWorld</title>
+    <%= include_gon(camel_case: true) %>
     <%= stylesheet_link_tag "event_world/application", media: "all" %>
     <%= javascript_include_tag "#{EwConfig.faye_path}/client.js", "https://maps.googleapis.com/maps/api/js?sensor=false", "event_world/application" %>
     <%= csrf_meta_tags %>
