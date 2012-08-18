@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = "EventWorld is a Rails Engine which displays realtime events on Google map."
   s.description = "EventWorld is a Rails Engine which displays realtime events on Google map."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.2.8"
