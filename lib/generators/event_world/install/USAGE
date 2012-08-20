@@ -1,0 +1,8 @@
+Description:
+    Copies faye.ru file.
+
+Example:
+    rails generate event_world:install
+
+    This will create:
+       faye.ru 
