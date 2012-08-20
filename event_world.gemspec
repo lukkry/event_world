@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Lukasz Krystkowiak"]
   s.email       = ["lukasz.krystkowiak@gmail.com"]
   s.summary     = "EventWorld is a Rails Engine which displays realtime events on Google map."
-  s.description = "EventWorld is a Rails Engine which displays realtime events on Google map."
+  s.homepage    = "http://github.com/lukkry/event_world"
 
   s.files = Dir["{app,config,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
