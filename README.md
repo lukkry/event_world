@@ -16,6 +16,14 @@ Update your bundle.
 
     $ bundle install
 
+Copy faye.ru file to your application using generator.
+
+    $ bundle exec rails g event_world:install
+    
+Run faye server.
+
+    $ rackup faye.ru -s thin -E production
+
 Using the gem
 ------------
 Mount engine to whatever path you choose.
