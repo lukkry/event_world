@@ -10,8 +10,8 @@ module EventWorld
     end
 
     describe "POST 'notify'" do
-      it "" do
-        Faye::Client.any_instance.should_receive(:publish).with("/events", { long: "1", lat: "2" })
+      it "publish event" do
+        Event.any_instance.should_receive(:publish)
         ew_post :notify, longitude: 1, latitude: 2
       end
     end
