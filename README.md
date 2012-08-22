@@ -1,5 +1,3 @@
-_Important notice:_ please do not use it yet! ;)
-
 EventWorld
 ---------
 EventWorld is a Rails Engine which displays realtime events on Google map.
