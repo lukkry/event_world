@@ -36,6 +36,10 @@ In order to notify EventWorld about new events, just send POST request to the be
 
 Enjoy realtime events on Google map.
 
+Example
+-------
+An example Rails 3.2 application: [event_world_example](http://github.com/lukkry/event_world_example)
+
 Contributing
 -----------
 EventWorld is an open source project and I encourage contributions ;)
