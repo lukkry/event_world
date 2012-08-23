@@ -1,4 +1,4 @@
-EventWorld
+EventWorld [![Build Status](https://secure.travis-ci.org/lukkry/event_world.png?branch=master)](http://travis-ci.org/lukkry/event_world)
 ---------
 EventWorld is a Rails Engine which displays realtime events on Google map.
 
