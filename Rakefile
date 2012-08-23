@@ -1,4 +1,8 @@
 #!/usr/bin/env rake
+
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec)
 begin
   require 'bundler/setup'
 rescue LoadError
@@ -37,4 +41,5 @@ Rake::TestTask.new(:test) do |t|
 end
 
 
-task :default => :test
+RSpec::Core::RakeTask.new(:spec)
+task :default => :spec
