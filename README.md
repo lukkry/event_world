@@ -33,7 +33,7 @@ mount EventWorld::Engine => "/events"
 Notify EventWorld about new events by initializing `EventWorld::Event` object and call `publish` method on it.
 
 ```ruby
-event = EventWorld::Event.new({ longitude: 21.89, latitude: 64.13 })
+event = EventWorld::Event.new({ longitude: -21.868286, latitude: 64.130263 })
 event.publish
 ```
 
