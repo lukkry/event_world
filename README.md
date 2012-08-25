@@ -1,6 +1,6 @@
 EventWorld [![Build Status](https://secure.travis-ci.org/lukkry/event_world.png?branch=master)](http://travis-ci.org/lukkry/event_world)
 ---------
-EventWorld is a Rails Engine which displays realtime events on Google map.
+EventWorld is a Rails Engine which displays realtime events on Google map (using [V3](https://developers.google.com/maps/documentation/javascript/reference)).
 
 Installation
 -----------
@@ -46,6 +46,10 @@ An example Rails 3.2 application: [event_world_example](http://github.com/lukkry
 Contributing
 -----------
 EventWorld is an open source project and I encourage contributions ;)
+
+References
+----------
+[Google Maps Javascript API V3 Reference](https://developers.google.com/maps/documentation/javascript/reference)
 
 License
 -------
