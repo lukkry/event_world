@@ -45,5 +45,5 @@ class EventWorld
     )
     sub.errback((error) -> alert(error.message))
 
-$(document).ready ->
+window.onload = ->
   new EventWorld(51.930718, 19.226074, 7)
