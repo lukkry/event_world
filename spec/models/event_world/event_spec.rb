@@ -11,7 +11,7 @@ module EventWorld
     end
 
     it "publish event to faye 'events' channer" do
-      Faye::Client.any_instance.should_receive(:publish).with "/events", { long: 1, lat: 2 }
+      Faye::Client.any_instance.should_receive(:publish).with "/events", { long: 1, lat: 2, body: "text" }
       event.publish
     end
   end
