@@ -16,6 +16,17 @@ class EventWorld
     @markers.push(marker)
     @bounds.extend(position)
     @map.fitBounds(@bounds)
+    marker
+
+  addInfoWindow: (marker, content) ->
+    infoWindow = new google.maps.InfoWindow({
+      content: content
+    })
+    infoWindow.open(@map, marker)
+    google.maps.event.addListener(marker, 'click', ->
+      infoWindow.open(@map, marker)
+    )
+    infoWindow
 
   initMap: ->
     options = {
@@ -28,7 +39,9 @@ class EventWorld
   initFaye: ->
     client = new Faye.Client(gon.fayePath, { timeout: 120 })
     sub = client.subscribe('/events', (message) =>
-      @addMarker(message.lat, message.long)
+      marker = @addMarker(message.lat, message.long)
+      if message.body
+        @addInfoWindow(marker, message.body)
     )
     sub.errback((error) -> alert(error.message))
 
