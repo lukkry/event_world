@@ -30,9 +30,12 @@ Mount engine to whatever path you choose.
 mount EventWorld::Engine => "/events"
 ```
 
-In order to notify EventWorld about new events, just send POST request to the below url with longitude and latitude params.
+Notify EventWorld about new events by initializing `EventWorld::Event` object and call `publish` method on it.
 
-    $ curl -X POST -d "longitude=-21.897812&latitude=64.131641" http://localhost:3000/events/notify
+```ruby
+event = EventWorld::Event.new({ longitude: 21.89, latitude: 64.13 })
+event.publish
+```
 
 Enjoy realtime events on Google map.
 
@@ -43,3 +46,7 @@ An example Rails 3.2 application: [event_world_example](http://github.com/lukkry
 Contributing
 -----------
 EventWorld is an open source project and I encourage contributions ;)
+
+License
+-------
+MIT-LICENSE
